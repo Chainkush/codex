@@ -65,12 +65,13 @@
     animation: hue-rotate 1s infinite;
   }
 
-  
-  @keyframes hue-rotate {
-    0% { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
+   
+  @media (min-width:768px) {
+    body table tr {
+      align-items: center;
+      display: flex;
   }
-
+  }
   
   @media (min-width:768px) {
     .f-container {
