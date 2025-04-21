@@ -107,13 +107,15 @@ img:hover {
 }
 
 .invisible-select {
-  color: transparent;
+  color: transparent; /* fallback */
+  text-shadow: 0 0 0 transparent;
   user-select: text;
-  -webkit-user-select: text; /* For Safari */
+  -webkit-user-select: text; /* for iOS Safari */
 }
 
 .invisible-select::selection {
-  color: lime; /* or your desired highlight color */
-  background-color: #000000; /* optional: visible when selected */
+  color: lime; /* visible when selected */
+  text-shadow: none;
+  background-color: black; /* optional: highlight bg */
 }
 
