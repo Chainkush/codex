@@ -107,14 +107,17 @@ img:hover {
 }
 
 .hidden-text {
+  opacity: 0;
   visibility: hidden;
+  transition: opacity 2s ease;
   pointer-events: none;
 }
 
 .hidden-reveal.revealed .hidden-text {
+  opacity: 1;
   visibility: visible;
+  color: lime; /* Or your preferred color */
   pointer-events: auto;
-  color: lime; /* or your desired reveal color */
 }
 
 .hidden-reveal {
@@ -122,5 +125,6 @@ img:hover {
   user-select: none;
   -webkit-user-select: none;
 }
+
 
 
