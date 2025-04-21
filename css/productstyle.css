@@ -106,16 +106,21 @@ img:hover {
   100% { filter: hue-rotate(360deg); }
 }
 
-.invisible-select {
-  color: transparent; /* fallback */
-  text-shadow: 0 0 0 transparent;
-  user-select: text;
-  -webkit-user-select: text; /* for iOS Safari */
+.hidden-text {
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.invisible-select::selection {
-  color: lime; /* visible when selected */
-  text-shadow: none;
-  background-color: black; /* optional: highlight bg */
+.hidden-reveal.revealed .hidden-text {
+  visibility: visible;
+  pointer-events: auto;
+  color: lime; /* or your desired reveal color */
 }
+
+.hidden-reveal {
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
 
